@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    <h1 class="mainname">Watch_Next</h1>
+    <div class="mainbox">
+        <div>
+        
+            <p class="heading floating">Registration</p>
+        </div>
+      <form onsubmit="myFunction()" >
+        <section class="secmargin" >
+            <label for="name" class="font1"> Enter your name :</label>
+            <br>
+           <input type="text" id="lname" class="isec"  required>
+          
+        </section>
+        <section class="secmargin">
+            <label for="name" class="font1">Enter your username :</label>
+            <br>
+           <input type="text" class="isec" id="name" required>
+        </section>
+       <section class="secmargin">
+            <label for="phone" class="font1">Enter your number :</label>
+            <br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="isec" required>
+        </section>
+        <section class="secmargin">
+            <label for="email" class="font1">Enter your email :</label>
+            <br>
+            <input class="isec" type="email" id="email" name="email"  required>
+        </section>
+        <section class="secmargin">
+            <label for="password" class="font1">Enter your password :</label>
+            <br>
+            <input type="password" name="pwd" id="pp" class="isec" required>
+
+        </section>
+        <section class="secmargin">
+            <label for="password" class="font1">Confirm your password :</label>
+            <br>
+            <input type="password" name="pwd" id="cpp" class="isec" required>
+        </section>
+<button onclick="return Validate()" class="center"  >Register</button>
+        </form>
+<a href="Login.html"><p style="text-align: center; color:black">Already have an account</p></a>
+    </div>
+  <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("pp").value;
+        var confirmPassword = document.getElementById("cpp").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+       else
+         {
+         
+            return true;
+         }
+       
+    }
+    
+    function myFunction() {
+ window.location.href="Login.html";
+  alert("Registration successful!");
+    
+}
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="center">
+    <h1 class="title floating">Log In</h1>
+    <section class="secmargin">
+
+      <form onsubmit="myFunction()">
+        <label for="name" class="font1"> Username</label>
+        <br>
+        <input type="text" class="isec" id="uname" placeholder="Enter your user name here" required>
+    </section>
+    <section class="secmargin">
+      <label for="password" class="font1">Password</label>
+      <br>
+      <input type="password" name="pwd" id="pass" class="isec" placeholder="Enter your password here" required>
+    </section>
+
+    <button onclick="return Validate()" class="center2">Log In</button>
+  </div>
+  </form>
+
+  <script type="text/javascript">
+    function Validate() {
+      var username = document.getElementById("uname").value;
+      var password = document.getElementById("pass").value;
+      if (username != "Surajdr") {
+        alert("Wrong Username. Please try again.");
+        return false;
+      }
+
+      if (password != "Suraj@2352") {
+        alert("Wrong Password. Please try again.");
+        return false;
+      }
+      else {return true;}
+    }
+    function myFunction() {
+      window.location.href = "HomePage.html";
+      alert("Login successful!");
+    }
+  </script>
+</body>
+
+</html>

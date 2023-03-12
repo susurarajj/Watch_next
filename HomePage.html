@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Homepage</title>
+  <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .cell {
+      position: relative;
+      top: 10%;
+      width: 33%;
+      height: 400px;
+      margin: 0 15px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .cell img {
+
+      opacity: 0.7;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .main-carousel {
+
+      margin-right: 70px;
+      margin-left: 80px;
+    }
+
+    .text-block {
+      position: absolute;
+      bottom: 55px;
+      left: 10px;
+      color: white;
+      
+      padding-left:0px;
+      
+
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <script src="js/homepage.js"></script>
+
+  <div class="demo-wrap">
+    <img class="demo-bg" src="homepage_img/bg.jpg">
+    <div class="demo-content">
+      <div>
+        <!-- <div > cotent div -->
+
+        <!--          <h1 class="mainname">Watch_Next</h1> -->
+
+        <div>
+          <div class="navbar">
+
+            <ul>
+              <li class="spctr">
+                <div>
+                  <h5><img src="homepage_img/img2.jpg" alt="Profile name"
+                      style="width: 50%;border-radius:5px ;display: block;margin-left:25% ;" class="floating"></h5>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="MainPage.html"><span class="material-symbols-outlined abc">draw</span></a>
+                  
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="Profile.html">
+                    <span class="material-symbols-outlined abc">
+                    chrome_reader_mode
+                  </span>
+                  </a>
+                  </div>
+              </li>
+<!--       for the log out settting we haver to addf ean button for the main function          -->
+              <li>
+                <div id="logout"><span class="material-symbols-outlined">
+                    power_rounded
+                  </span></div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <h1 class="mainname">Watch_Next</h1>
+      </div>
+      
+      <div class="main-carousel">
+        <div class="cell"><img src="homepage_img/AOT.jpg">
+          <div class="text-block">
+            <h6>#1 trending</h6>
+            <h4>Attack on Titans</h4>
+            <p>Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans, forcing humans to hide in...</p>
+          </div>
+
+        </div>
+        <div class="cell"><img src="homepage_img/death.jpg">
+          <div class="text-block">
+            <h6>#2 trending</h6>
+            <h4>Death Note</h4>
+            <p>A shinigami, as a god of death, can kill any person—provided they see their victim's face and write their victim's name in a...</p>
+          </div>
+        
+        </div>
+        <div class="cell"><img src="homepage_img/fullmetal.png">
+          <div class="text-block">
+            <h6>#3 trending</h6>
+            <h4>Fullmetal Alchemist</h4>
+            <p>"In order for something to be obtained, something of equal value must be lost." Alchemy is bound by this Law of Equivalent...</p>
+          </div>
+        </div>
+        
+        <div class="cell"><img src="homepage_img/goku.png">
+          <div class="text-block">
+            <h6>#4 trending</h6>
+            <h4>Dragon ball Z</h4>
+            <p>Five years after winning the World Martial Arts tournament, SON-Goku is now living a peaceful life with his wife and son. This changes, however...</p>
+          </div>
+        </div>
+        <div class="cell"><img src="homepage_img/naruto.jpg">
+          <div class="text-block">
+            <h6>#5 trending</h6>
+            <h4>Naruto</h4>
+            <p>Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden...</p>
+          </div>
+        </div>
+        <div class="cell"><img src="homepage_img/one peice.jpg">
+          <div class="text-block">
+            <h6>#6 trending</h6>
+            <h4>One peice</h4>
+            <p>Gold Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by.. </p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script type="text/javascript">
+        $('.main-carousel').flickity({
+          // options
+          cellAlign: 'left',
+          wrapAround: true,
+          freeScroll: true
+        });
+
+        document.getElementById("logout").onclick = function() {  
+myFunction() 
+};  
+        function myFunction() {
+
+  alert("Logging out");
+    window.location.href="Login.html";
+}
+      </script>
+
+</body>
+
+</html>
